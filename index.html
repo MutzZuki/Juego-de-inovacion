@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exposición de Innovación Empresarial - Plataforma Interactiva</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header / Navigation Bar -->
+  <header class="top-nav">
+    <div class="brand">
+      <div class="logo-icon">
+        <i data-lucide="zap"></i>
+      </div>
+      <div class="brand-text">
+        <span class="brand-title">INNOVA<span class="highlight">CORE</span></span>
+        <span class="brand-subtitle">Plataforma de Exposición Académica</span>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs for the 5 Content Modules -->
+    <nav class="mode-tabs" id="moduleTabs">
+      <button class="tab-btn active" data-module="1">
+        <i data-lucide="rocket"></i>
+        <span>1. Emprendimiento</span>
+      </button>
+      <button class="tab-btn" data-module="2">
+        <i data-lucide="cpu"></i>
+        <span>2. Gestión Tech</span>
+      </button>
+      <button class="tab-btn" data-module="3">
+        <i data-lucide="brain-circuit"></i>
+        <span>3. Método TRIZ</span>
+      </button>
+      <button class="tab-btn" data-module="4">
+        <i data-lucide="users"></i>
+        <span>4. Liderazgo & PNL</span>
+      </button>
+      <button class="tab-btn" data-module="5">
+        <i data-lucide="briefcase"></i>
+        <span>5. Casos Reales</span>
+      </button>
+    </nav>
+
+    <!-- Presenter Controls -->
+    <div class="nav-actions">
+      <div class="timer-badge" id="presentationTimer">
+        <i data-lucide="clock"></i> <span id="timerText">00:00</span>
+        <button class="timer-toggle" id="btnTimerToggle" title="Iniciar/Pausar tiempo"><i data-lucide="play"></i></button>
+      </div>
+      <button class="btn-primary" id="btnFullscreen">
+        <i data-lucide="maximize-2"></i> Modo Presentación
+      </button>
+    </div>
+  </header>
+
+  <!-- Navigation Helper Floating Bar -->
+  <div class="presenter-floating-nav">
+    <button id="btnPrevSection" title="Sección Anterior (Tecla Flecha Izquierda)"><i data-lucide="chevron-left"></i> Anterior</button>
+    <span class="section-indicator" id="sectionIndicator">Módulo 1 de 5</span>
+    <button id="btnNextSection" title="Siguiente Sección (Tecla Flecha Derecha)">Siguiente <i data-lucide="chevron-right"></i></button>
+  </div>
+
+  <!-- MAIN LAYOUT CONTAINING THE 5 MODULES -->
+  <main class="main-content">
+
+    <!-- ===================================================================
+         MÓDULO 1: FUNDAMENTOS DEL EMPRENDIMIENTO Y CREACIÓN DE NEGOCIOS
+         =================================================================== -->
+    <section class="module-section active" id="module-1">
+      <div class="module-header">
+        <span class="module-tag"><i data-lucide="compass"></i> Módulo 1 de 5</span>
+        <h2>Fundamentos del Emprendimiento y Creación de Negocios</h2>
+        <p>Proceso de ideación, validación de hipótesis y evaluación de factibilidad multidimensional.</p>
+      </div>
+
+      <div class="grid-layout grid-2col">
+        <!-- Concepts Card -->
+        <div class="glass-card">
+          <div class="card-title">
+            <i data-lucide="lightbulb"></i>
+            <h3>El Proceso de Ideación y la Triada de Éxito</h3>
+          </div>
+          <p class="card-text">El desarrollo de un negocio comienza observando el entorno para detectar necesidades insatisfechas y generar soluciones.</p>
+
+          <div class="triad-container">
+            <span class="triad-title"><i data-lucide="check-circle-2"></i> Los 3 Requisitos de una Idea Exitosa</span>
+            <div class="triad-grid">
+              <div class="triad-box útil">
+                <i data-lucide="target"></i>
+                <h4>1. ÚTIL</h4>
+                <p>Resuelve un problema real o satisface un deseo concreto del cliente.</p>
+              </div>
+              <div class="triad-box viable">
+                <i data-lucide="settings"></i>
+                <h4>2. VIABLE</h4>
+                <p>Es posible de ejecutar con los recursos y capacidades actuales.</p>
+              </div>
+              <div class="triad-box diferente">
+                <i data-lucide="sparkles"></i>
+                <h4>3. DIFERENTE</h4>
+                <p>Destaca con claridad frente a las alternativas de la competencia.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-subtitle-box">
+            <i data-lucide="alert-octagon"></i>
+            <h4>Errores Comunes a Evitar</h4>
+            <ul>
+              <li><strong>Enamorarse de la idea:</strong> Ignorar la información negativa del mercado.</li>
+              <li><strong>Lanzar sin investigar:</strong> Asumir lo que el cliente quiere sin validación.</li>
+              <li><strong>Subestimar imprevistos:</strong> No prever margen de maniobra financiero.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Interactive Widget: Multidimensional Feasibility Calculator -->
+        <div class="glass-card widget-card">
+          <div class="card-title">
+            <i data-lucide="sliders"></i>
+            <h3>Simulador de Factibilidad del Proyecto</h3>
+          </div>
+          <p class="widget-desc">Ajusta los 4 pilares de factibilidad para obtener el diagnóstico del negocio en tiempo real:</p>
+
+          <div class="slider-control">
+            <div class="slider-label">
+              <span><i data-lucide="users"></i> Factibilidad de Mercado</span>
+              <strong id="valFeasMercado">80%</strong>
+            </div>
+            <input type="range" id="sliderFeasMercado" min="10" max="100" value="80">
+            <span class="slider-hint">Demanda comprobada, interés de clientes y precios competitivos.</span>
+          </div>
+
+          <div class="slider-control">
+            <div class="slider-label">
+              <span><i data-lucide="wrench"></i> Factibilidad Técnica</span>
+              <strong id="valFeasTecnica">70%</strong>
+            </div>
+            <input type="range" id="sliderFeasTecnica" min="10" max="100" value="70">
+            <span class="slider-hint">Equipos, tecnología, infraestructura y know-how especializado.</span>
+          </div>
+
+          <div class="slider-control">
+            <div class="slider-label">
+              <span><i data-lucide="dollar-sign"></i> Factibilidad Financiera</span>
+              <strong id="valFeasFinanciera">75%</strong>
+            </div>
+            <input type="range" id="sliderFeasFinanciera" min="10" max="100" value="75">
+            <span class="slider-hint">Margen de utilidad, punto de equilibrio y Retorno de Inversión (ROI).</span>
+          </div>
+
+          <div class="slider-control">
+            <div class="slider-label">
+              <span><i data-lucide="file-text"></i> Factibilidad Legal</span>
+              <strong id="valFeasLegal">90%</strong>
+            </div>
+            <input type="range" id="sliderFeasLegal" min="10" max="100" value="90">
+            <span class="slider-hint">Permisos sanitarios, marcas, registros fiscales y propiedad intelectual.</span>
+          </div>
+
+          <!-- Feasibility Result Display -->
+          <div class="feasibility-result" id="feasResultBox">
+            <div class="feas-score-circle">
+              <span id="feasScoreNumber">78%</span>
+              <small>Índice Global</small>
+            </div>
+            <div class="feas-text">
+              <h4 id="feasStatusTitle">PROYECTO ALTAMENTE VIABLE</h4>
+              <p id="feasStatusDesc">El modelo cumple con los requerimientos necesarios para avanzar a la fase de Plan de Negocios.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         MÓDULO 2: INNOVACIÓN ESTRATÉGICA Y GESTIÓN TECNOLÓGICA
+         =================================================================== -->
+    <section class="module-section" id="module-2">
+      <div class="module-header">
+        <span class="module-tag"><i data-lucide="cpu"></i> Módulo 2 de 5</span>
+        <h2>Innovación Estratégica y Gestión Tecnológica</h2>
+        <p>Administración del conocimiento tecnológico, ciclo de vida en Curva "S" y visión predictiva.</p>
+      </div>
+
+      <div class="grid-layout grid-2col">
+        <!-- Types of Innovation Card -->
+        <div class="glass-card">
+          <div class="card-title">
+            <i data-lucide="layers"></i>
+            <h3>Tipos de Innovación & Gestión Tecnológica</h3>
+          </div>
+          
+          <div class="types-grid">
+            <div class="type-badge-card">
+              <span class="badge-tag incremental">INCREMENTAL</span>
+              <h4>Mejoras Continuas</h4>
+              <p>Optimizaciones a productos existentes. <em>Ejemplo: Mochila escolar con puerto de carga USB integrado.</em></p>
+            </div>
+            <div class="type-badge-card">
+              <span class="badge-tag radical">RADICAL</span>
+              <h4>Disrupción Total</h4>
+              <p>Transformaciones profundas que crean industrias completamente nuevas.</p>
+            </div>
+          </div>
+
+          <div class="tech-layers-box">
+            <h4><i data-lucide="shield-check"></i> Las 3 Capas de Tecnología Organizacional</h4>
+            <div class="layer-item">
+              <strong>1. Tecnología de Producto:</strong> Conocimientos base para la diferenciación del producto.
+            </div>
+            <div class="layer-item">
+              <strong>2. Tecnología de Proceso:</strong> Sistemas de manufactura, automatización y producción.
+            </div>
+            <div class="layer-item">
+              <strong>3. Tecnología Administrativa:</strong> Optimización de recursos mediante herramientas digitales y ERPs.
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Widget: Interactive S-Curve Lifecycle Simulator -->
+        <div class="glass-card widget-card">
+          <div class="card-title">
+            <i data-lucide="trending-up"></i>
+            <h3>Simulador del Ciclo de Vida Tecnológico (Curva en "S")</h3>
+          </div>
+          <p class="widget-desc">Mueve la línea de tiempo para explorar cómo evoluciona la tecnología en las 4 etapas del ciclo de vida:</p>
+
+          <div class="s-curve-control">
+            <label for="sliderSCurve">Avance en la Curva S:</label>
+            <input type="range" id="sliderSCurve" min="1" max="4" step="1" value="2">
+            <div class="s-curve-steps">
+              <span>Etapa 1</span>
+              <span>Etapa 2</span>
+              <span>Etapa 3</span>
+              <span>Etapa 4</span>
+            </div>
+          </div>
+
+          <!-- Active Stage Display Card -->
+          <div class="stage-display-card" id="stageDisplayCard">
+            <div class="stage-header">
+              <span class="stage-number" id="stageNum">ETAPA 2</span>
+              <h3 id="stageTitle">Investigación y Desarrollo (I+D) Aplicado</h3>
+            </div>
+            <p id="stageDesc">Se desarrollan los primeros prototipos funcionales y se realizan pruebas piloto en el mercado.</p>
+            
+            <div class="stage-metrics">
+              <div class="s-metric">
+                <span>Riesgo Tecnológico</span>
+                <strong id="stageRisk">MEDIO-ALTO</strong>
+              </div>
+              <div class="s-metric">
+                <span>Inversión Requerida</span>
+                <strong id="stageInv">ELEVADA (I+D)</strong>
+              </div>
+              <div class="s-metric">
+                <span>Impacto de Mercado</span>
+                <strong id="stageImpact">EN CRECIMIENTO</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Canvas graphic rendering S-curve -->
+          <div class="scurve-canvas-wrapper">
+            <canvas id="scurveCanvas"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         MÓDULO 3: METODOLOGÍA TRIZ (RESOLUCIÓN DE PROBLEMAS)
+         =================================================================== -->
+    <section class="module-section" id="module-3">
+      <div class="module-header">
+        <span class="module-tag"><i data-lucide="brain-circuit"></i> Módulo 3 de 5</span>
+        <h2>Metodología TRIZ: La Ciencia de la Inventiva</h2>
+        <p>Teoría para la Resolución de Problemas Inventivos (Genrich Altshuller). Sistematización de la creatividad.</p>
+      </div>
+
+      <div class="grid-layout grid-2col">
+        <!-- TRIZ Theory Card -->
+        <div class="glass-card">
+          <div class="card-title">
+            <i data-lucide="search"></i>
+            <h3>Origen, Contradicciones e Idealidad</h3>
+          </div>
+          <p class="card-text">Altshuller analizó más de 400,000 patentes para demostrar que los problemas técnicos se repiten entre industrias y se pueden resolver con **40 Principios Inventivos**.</p>
+
+          <div class="ideality-box">
+            <span class="formula-tag">CONCEPTO CLAVE DE TRIZ</span>
+            <h4>Búsqueda de la "Idealidad"</h4>
+            <div class="formula-display">
+              $$ \text{Idealidad} = \frac{\sum \text{Beneficios}}{\sum \text{Costos} + \sum \text{Perjuicios}} $$
+            </div>
+            <p>Un sistema evoluciona hacia el estado ideal donde cumple todas sus funciones sin consumir recursos extra.</p>
+          </div>
+
+          <div class="triz-app-box">
+            <h4><i data-lucide="code-2"></i> Aplicación en Software y TI</h4>
+            <p>TRIZ resuelve conflictos de programación: optimizar algoritmos para mayor velocidad sin requerir mayor memoria RAM o consumo de procesador.</p>
+          </div>
+        </div>
+
+        <!-- Interactive Widget: TRIZ Contradiction Matrix Generator -->
+        <div class="glass-card widget-card">
+          <div class="card-title">
+            <i data-lucide="matrix"></i>
+            <h3>Matriz de Contradicciones TRIZ en Vivo</h3>
+          </div>
+          <p class="widget-desc">Selecciona qué parámetro quieres MEJORAR y cuál EMPEORA para calcular los Principios Inventivos Altshuller recomendados:</p>
+
+          <div class="matrix-select-group">
+            <div class="select-box">
+              <label for="selectMejorar"><i data-lucide="arrow-up-right"></i> Parámetro a MEJORAR:</label>
+              <select id="selectMejorar">
+                <option value="velocidad">1. Velocidad / Rapidez</option>
+                <option value="fuerza">2. Fuerza / Capacidad</option>
+                <option value="durabilidad">3. Durabilidad / Resistencia</option>
+                <option value="facilidad">4. Facilidad de Uso</option>
+              </select>
+            </div>
+
+            <div class="select-box">
+              <label for="selectEmpeora"><i data-lucide="arrow-down-right"></i> Parámetro que EMPEORA:</label>
+              <select id="selectEmpeora">
+                <option value="peso">A. Peso / Masa del objeto</option>
+                <option value="energia">B. Consumo de Energía</option>
+                <option value="costo">C. Costo Operativo</option>
+                <option value="complejidad">D. Complejidad del Sistema</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- TRIZ Result Box -->
+          <div class="triz-result-card" id="trizResultCard">
+            <span class="triz-result-tag">PRINCIPIOS INVENTIVOS RECOMENDADOS</span>
+            <div class="principles-list" id="trizPrinciplesList">
+              <!-- Dynamically rendered -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         MÓDULO 4: LIDERAZGO, PNL Y DESARROLLO HUMANO
+         =================================================================== -->
+    <section class="module-section" id="module-4">
+      <div class="module-header">
+        <span class="module-tag"><i data-lucide="users"></i> Módulo 4 de 5</span>
+        <h2>Liderazgo, PNL y Desarrollo Humano Organizacional</h2>
+        <p>Programación Neurolingüística, reencuadre de paradigmas y los 7 Hábitos de Stephen Covey.</p>
+      </div>
+
+      <div class="grid-layout grid-2col">
+        <!-- PNL & Covey Theory Card -->
+        <div class="glass-card">
+          <div class="card-title">
+            <i data-lucide="brain"></i>
+            <h3>Programación Neurolingüística & Equilibrio P/CP</h3>
+          </div>
+          
+          <div class="pnl-quote-box">
+            <i data-lucide="quote"></i>
+            <p><strong>"El mapa no es el territorio"</strong>: No existe una única realidad, sino interpretaciones individuales moldeadas por la cultura y la experiencia.</p>
+          </div>
+
+          <div class="pnl-tools-grid">
+            <div class="pnl-tool">
+              <h4>Reencuadre (Reframing)</h4>
+              <p>Cambiar el significado atribuido a una experiencia para transformar bloqueos en oportunidades.</p>
+            </div>
+            <div class="pnl-tool">
+              <h4>Anclaje y Visualización</h4>
+              <p>Establecer estados emocionales de alta efectividad para la toma de decisiones y negociación.</p>
+            </div>
+          </div>
+
+          <div class="covey-balance-box">
+            <h4><i data-lucide="scale"></i> Equilibrio P/CP (Stephen Covey)</h4>
+            <p>La efectividad requiere balance entre la <strong>P (Producción de resultados)</strong> y la <strong>CP (Capacidad de Producción / Renovación del equipo)</strong>.</p>
+          </div>
+        </div>
+
+        <!-- Interactive Widget: Interactive 7 Habits Explorer & PNL Reframer -->
+        <div class="glass-card widget-card">
+          <div class="card-title">
+            <i data-lucide="compass"></i>
+            <h3>Rueda Interactiva de los 7 Hábitos</h3>
+          </div>
+          <p class="widget-desc">Haz clic en cualquier hábito para ver su aplicación práctica en innovación y liderazgo:</p>
+
+          <div class="habits-buttons-grid">
+            <button class="habit-btn active" data-habit="1">1. Proactividad</button>
+            <button class="habit-btn" data-habit="2">2. Fin en Mente</button>
+            <button class="habit-btn" data-habit="3">3. Primero lo Primero</button>
+            <button class="habit-btn" data-habit="4">4. Ganar / Ganar</button>
+            <button class="habit-btn" data-habit="5">5. Comprender Primero</button>
+            <button class="habit-btn" data-habit="6">6. Sinergizar</button>
+            <button class="habit-btn" data-habit="7">7. Afilar la Sierra</button>
+          </div>
+
+          <!-- Habit Details Display -->
+          <div class="habit-detail-card" id="habitDetailCard">
+            <div class="habit-header">
+              <span class="habit-type-badge" id="habitTypeBadge">VICTORIA PRIVADA</span>
+              <h3 id="habitTitle">Hábito 1: Sea Proactivo</h3>
+            </div>
+            <p id="habitDesc">Asumir la responsabilidad absoluta de las decisiones y erradicar el lenguaje reactivo de victimización.</p>
+            <div class="habit-action-box">
+              <span>Aplicación en Innovación:</span>
+              <strong id="habitAction">Tomar la iniciativa para prototipar sin esperar órdenes o condiciones perfectas.</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         MÓDULO 5: CASOS DE ESTUDIO DE TRANSFORMACIÓN EMPRESARIAL
+         =================================================================== -->
+    <section class="module-section" id="module-5">
+      <div class="module-header">
+        <span class="module-tag"><i data-lucide="briefcase"></i> Módulo 5 de 5</span>
+        <h2>Strategic Innovation & Business Transformation Case Studies</h2>
+        <p>Casos de estudio reales que respaldan la aplicación empírica de la metodología.</p>
+      </div>
+
+      <div class="cases-container">
+        <!-- Interactive Case Switcher Tabs -->
+        <div class="case-tabs">
+          <button class="case-tab-btn active" data-case="tecnomarket">
+            <i data-lucide="shopping-cart"></i>
+            <span>Caso 1: TecnoMarket</span>
+            <small>PNL & Reencuadre Digital</small>
+          </button>
+          <button class="case-tab-btn" data-case="ecobox">
+            <i data-lucide="package"></i>
+            <span>Caso 2: EcoBox</span>
+            <small>MVP & Sustentabilidad</small>
+          </button>
+          <button class="case-tab-btn" data-case="limadeunas">
+            <i data-lucide="refresh-cw"></i>
+            <span>Caso 3: Lima de Uñas</span>
+            <small>Kaizen & Feedback Loop</small>
+          </button>
+        </div>
+
+        <!-- Dynamic Case Display Area -->
+        <div class="glass-card case-display-card" id="caseDisplayCard">
+          
+          <!-- CASE 1 CONTENT -->
+          <div class="case-content active" id="case-tecnomarket">
+            <div class="case-banner">
+              <div class="case-badge">REENCUADRE PARADIGMÁTICO (PNL)</div>
+              <h2>Caso TecnoMarket: Superando la Parálisis Digital</h2>
+            </div>
+            
+            <div class="case-body-grid">
+              <div class="case-column">
+                <h4><i data-lucide="alert-triangle"></i> El Problema</h4>
+                <p>TecnoMarket sufría una severa crisis comercial al negarse a adoptar el e-commerce ante la digitalización del mercado. Los directivos estaban paralizados por ver la tecnología como un "riesgo innecesario".</p>
+              </div>
+              <div class="case-column">
+                <h4><i data-lucide="key"></i> La Solución con PNL</h4>
+                <p>Se aplicó la técnica de <strong>Reencuadre (Reframing)</strong>. Los líderes cambiaron su percepción: la tecnología dejó de verse como un gasto riesgoso y pasó a entenderse como un <em>"mecanismo de protección del patrimonio de la empresa"</em>.</p>
+              </div>
+            </div>
+
+            <div class="case-result-bar">
+              <div class="res-item">
+                <span>Resultado:</span>
+                <strong>Adopción 100% del E-Commerce</strong>
+              </div>
+              <div class="res-item">
+                <span>Impacto:</span>
+                <strong>+140% Ventas en Canales Digitales</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- CASE 2 CONTENT -->
+          <div class="case-content" id="case-ecobox">
+            <div class="case-banner">
+              <div class="case-badge">SUSTENTABILIDAD & BUSINESS MODEL CANVAS</div>
+              <h2>Caso EcoBox: Empaques "0 Unicel" para Comida</h2>
+            </div>
+            
+            <div class="case-body-grid">
+              <div class="case-column">
+                <h4><i data-lucide="leaf"></i> La Propuesta de Valor</h4>
+                <p>Desarrollo de empaques ecológicos para entregas a domicilio fabricados con materiales orgánicos compostables (trigo, caña de azúcar y bambú).</p>
+              </div>
+              <div class="case-column">
+                <h4><i data-lucide="check-square"></i> Validación de Mercado</h4>
+                <p>Antes de producir a gran escala, se utilizó un <strong>Producto Mínimo Viable (MVP)</strong> y pruebas Beta con restaurantes locales, estructurando los costos con el Business Model Canvas.</p>
+              </div>
+            </div>
+
+            <div class="case-result-bar">
+              <div class="res-item">
+                <span>Materiales:</span>
+                <strong>Trigo, Caña & Bambú</strong>
+              </div>
+              <div class="res-item">
+                <span>Resultado MVP:</span>
+                <strong>Reducción del 100% de Unicel en Piloto</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- CASE 3 CONTENT -->
+          <div class="case-content" id="case-limadeunas">
+            <div class="case-banner">
+              <div class="case-badge">FILOSOFÍA KAIZEN & MEJORA CONTINUA</div>
+              <h2>Caso Lima de Uñas Renovada: Diseño Centrado en el Usuario</h2>
+            </div>
+            
+            <div class="case-body-grid">
+              <div class="case-column">
+                <h4><i data-lucide="eye"></i> Observación del Dolor</h4>
+                <p>Se identificaron fricciones directas de los usuarios: uñas mal limadas, desgaste rápido de limas tradicionales e irritación en la piel.</p>
+              </div>
+              <div class="case-column">
+                <h4><i data-lucide="refresh-cw"></i> Ciclo Kaizen (Mejora Continua)</h4>
+                <p>Se testearon prototipos de estuches reciclados y limas ergonómicas. Se implementó un bucle de retroalimentación constante con los clientes para lanzar la versión 2.0.</p>
+              </div>
+            </div>
+
+            <div class="case-result-bar">
+              <div class="res-item">
+                <span>Metodología:</span>
+                <strong>Bucle de Reseñas -> Versión 2.0</strong>
+              </div>
+              <div class="res-item">
+                <span>Satisfacción:</span>
+                <strong>98% Calificación Positiva</strong>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- JavaScript File -->
+  <script src="app.js"></script>
+</body>
+</html>
